@@ -38,6 +38,12 @@ public class FirstBank {
                 case 2:
                     System.out.println("Informe o valor a ser transferido:");
                     double valorTransferencia = leitor.nextDouble();
+
+                    if (valorTransferencia <= 0){
+                        System.out.println("Valor a ser transferido deve ser maior que ZERO! \n");
+                        break;
+                    }
+
                     if (saldo <= valorTransferencia) {
                         System.out.println("Saldo insuficiente para realizar a operação \n" );
                         break;
